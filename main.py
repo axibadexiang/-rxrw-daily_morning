@@ -40,6 +40,10 @@ def get_words():
     return get_words()
   return words.json()['data']['text']
 
+def get_video():
+  video = requests.get("https://api.apiopen.top/api/getHaoKanVideo?page=0&size=2")
+  print(video)
+
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
